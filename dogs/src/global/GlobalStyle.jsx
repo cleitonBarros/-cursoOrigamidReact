@@ -1,4 +1,4 @@
-import { GlobalStyle } from "styled-components";
+import { createGlobalStyle} from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: var(--type-first);
   }
   body{
+    padding-top: 4rem;
     --type-first: Helvetica, Arial, sans-serif;
     --type-second: "Spectral", Georgia;
     
@@ -29,6 +30,9 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 50rem;
     padding: 0 1rem;
     margin: 0 auto;
+  }
+  a{
+    text-decoration: none;
   }
 
 `;
