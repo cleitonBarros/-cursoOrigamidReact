@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import { Container } from "../global/Container";
-import Dogs  from '../assets/dogs.svg';
+import Dogs  from '../../public/assets/dogs.svg';
 
 const Headers = styled.header`
     width:100% ;
@@ -31,7 +31,7 @@ const Headers = styled.header`
                 display: block;
                 width: 14px;
                 height: 17px;
-                background: url('../../../dogs/src/assets/usuario.svg') ;
+                background: url("./public/assets/usuario.svg") ;
                 margin-left: .5rem;
             }
         }

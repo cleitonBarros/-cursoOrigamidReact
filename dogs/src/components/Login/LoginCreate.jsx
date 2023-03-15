@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
 
-export default function Login(){
+export default function LoginCreate(){
     return(
         <>
-           Login    
+          LoginCreate
         </>
     )
     
