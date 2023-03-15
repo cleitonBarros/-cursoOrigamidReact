@@ -3,27 +3,31 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import Input from "../Form/Input";
 import Button from "../Form/Button";
+import useForm from "../../hooks/useForm";
 
 export default function LoginForm(){
-
-    const [username, setUsername] = React.useState('')
-    const [password, setPassword] = React.useState('')
+    const username = useForm()
+    const password = useForm()
 
     function handleSubmit(event){
         event.preventDefault();
-        fetch('https://dogsapi.origamid.dev/json/jwt-auth/vi/token',{
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({username,password})
-        }).then((res) =>{
-            console.log(res)
-            return res.json()
-        }).then((json)=>{
-            console.log(json)
-        })
-        
+        if(username.validate() && password.validate())
+        {
+            fetch('https://dogsapi.origamid.dev/json/jwt-auth/vi/token',{
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify()
+            }).then((res) =>{
+                console.log(res)
+                return res.json()
+            }).then((json)=>{
+                console.log(json)
+            })
+        }
+
+
     }
     return(
         <section>
@@ -33,11 +37,13 @@ export default function LoginForm(){
                 name='username'
                 label='Usuario'
                 type='text'
+                {...username}
             />
             <Input 
                 name='password'
                 label='Senha'
                 type='password'
+                {...password}
             />
             <Button value="Entrar"/>
           </form>

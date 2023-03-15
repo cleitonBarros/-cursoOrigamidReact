@@ -9,8 +9,7 @@ const Wrapper = styled.div`
         font-size: 1rem;
         line-height: 1;
         padding-bottom: .5rem;
-    }
-    
+    }   
 `
 const Error = styled.p`
     color: #f31;
@@ -37,10 +36,15 @@ const InputField = styled.input`
 
     }
 `
+
 export default function Input({
     label,
     type,
-    name
+    name,
+    value,
+    onChange,
+    onBlur,
+    error,
 }){
     return(
         <Wrapper>
@@ -48,9 +52,12 @@ export default function Input({
             <InputField 
                 id={name}
                 name={name}
-                type={type} 
+                type={type}
+                value={value}
+                onChange={onChange}
+                onBlur={onBlur}
             />
-            <Error>Error</Error>
+            {error && <Error>{error}</Error>}
 
         </Wrapper>
         
