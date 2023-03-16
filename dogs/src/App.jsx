@@ -4,21 +4,24 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Login from "./components/Login/Login"
 import Home from "./pages/Home"
+import { UserStorage } from "./global/UserContext"
 
 
 
 function App() {
-//https://dogsapi.origamid.dev/json/
+
   return (
     <>
       <BrowserRouter>
-        <GlobalStyle />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/login/*" element={<Login />}/>
-        </Routes>
-        <Footer />  
+        <UserStorage>
+          <GlobalStyle />
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/login/*" element={<Login />}/>
+          </Routes>
+          <Footer />  
+        </UserStorage>
       </BrowserRouter>
     </>
   )

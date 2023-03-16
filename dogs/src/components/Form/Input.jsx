@@ -33,7 +33,6 @@ const InputField = styled.input`
         border-color: #fb1;
         background-color: white;
         box-shadow: 0 0 0 3px #fea;
-
     }
 `
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components'
 
-const Btn = styled.button`
+export const Btn = styled.button`
     font-size: 1rem;
     font-family: var(--type-first);
     cursor: pointer;

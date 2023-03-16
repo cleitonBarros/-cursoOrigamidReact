@@ -1,7 +1,9 @@
+import React from 'react';
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import { Container } from "../global/Container";
 import Dogs  from '../../public/assets/dogs.svg';
+import { UserContext } from '../global/UserContext';
 
 const Headers = styled.header`
     width:100% ;
@@ -41,6 +43,7 @@ const Headers = styled.header`
 
 
 export default function Header(){
+    const {data, userLogout} = React.useContext(UserContext)
     return(
         <Headers>
             <Container>
@@ -48,7 +51,16 @@ export default function Header(){
                     <Link to="/" >
                         <img src={Dogs} alt="icone" />
                     </Link>
-                    <Link  className="login" to="/login">Login / Criar Login</Link>     
+                    {data ? (
+                        <Link  className="login" to="/conta">
+                            {data.nome} / 
+                            <button onClick={userLogout}>Sair</button>
+                        </Link>
+                    ):(
+                        <Link  className="login" to="/login">
+                            Login / Criar Login
+                        </Link>
+                    )}
                 </nav>
             </Container>
         </Headers>
