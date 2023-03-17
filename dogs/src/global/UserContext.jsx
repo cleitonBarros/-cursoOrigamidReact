@@ -13,6 +13,18 @@ export function UserStorage ({children}){
     const navigate  = useNavigate();
 
     
+    const userLogout = React.useCallback(
+        async function () {
+          setData(null);
+          setError(null);
+          setLoading(false);
+          setLogin(false);
+          window.localStorage.removeItem('token');
+          navigate('/login');
+          console.log(data, error, loading, login  )
+        },
+        [navigate],
+      );
     
     async function getUser(token) {
         const {url,options} = USER_GET(token)
@@ -20,13 +32,13 @@ export function UserStorage ({children}){
         const json = await res.json()
         setData(json)
         setLogin(true)
-        console.log(json)
+        
     }
     async function userLogin(username, password){
         try{
             setError(null)
             setLoading(true)
-            const {url, options} = TOKEN_POST({username: username, password: password})
+            const {url, options} = TOKEN_POST({username, password})
             const tokenRes = await fetch(url, options)
             if(!tokenRes.ok) throw new Error(`Error: Usuario ou senha Invalidos`)
             const {token} = await tokenRes.json()
@@ -41,14 +53,6 @@ export function UserStorage ({children}){
         }
     }
     
-    const userLogout= React.useCallback( async function (){
-        setData(null)
-        setError(null)
-        setLoading(false)
-        setLogin(false)
-        window.localStorage.removeItem('token')
-        navigate('/login')
-    },[navigate])
 
     React.useEffect(()=>{
         async function autoLogin(){
