@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
 import { Container } from "../global/Container";
-import Dogs  from '../../public/assets/dogs.svg';
+import Dogs  from '../../public/dogs.svg';
 import { UserContext } from '../global/UserContext';
 
 const Headers = styled.header`
@@ -33,7 +33,7 @@ const Headers = styled.header`
                 display: block;
                 width: 14px;
                 height: 17px;
-                background: url("./public/assets/usuario.svg") no-repeat center center;
+                background: url("./public/usuario.svg") no-repeat center center;
                 margin-left: .5rem;
             }
         }

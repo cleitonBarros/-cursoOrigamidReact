@@ -6,6 +6,7 @@ import Button, { Btn } from "../Form/Button";
 import useForm from "../../hooks/useForm";
 import { UserContext } from "../../global/UserContext"
 import  Error  from '../../components/Interfaces/Error'
+import {Title} from "../../components/Interfaces/Title"
 
 const Form = styled.form`
     margin-bottom: 2rem;
@@ -44,36 +45,12 @@ const Cadastro = styled.div`
                 border-radius: .2rem;
             }
         }
-
         p{
             margin: 2rem 0 2rem 0;
         }
     
 
 `
-const Title = styled.h1`
-    font-family: var(--type-second);
-    line-height: 1;
-    font-size: 3rem;
-    margin: 1rem 0;
-    position: relative;
-    z-index: 1;
-
-    &::after{
-        content:'';
-        display: block;
-        width:1.5rem;
-        height:1.5rem;
-        background-color: #fb1;
-        position: absolute;
-        bottom: 3px;
-        left: -4px;
-        border-radius: .2rem;
-        z-index: -1;
-    }
-
-`
-
 export default function LoginForm(){
     const username = useForm()
     const password = useForm()

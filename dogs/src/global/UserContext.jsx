@@ -13,6 +13,7 @@ export function UserStorage ({children}){
     const navigate  = useNavigate();
 
     
+    
     async function getUser(token) {
         const {url,options} = USER_GET(token)
         const res = await fetch(url, options)
