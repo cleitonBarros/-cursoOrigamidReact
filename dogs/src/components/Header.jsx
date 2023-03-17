@@ -33,7 +33,7 @@ const Headers = styled.header`
                 display: block;
                 width: 14px;
                 height: 17px;
-                background: url("./public/assets/usuario.svg") ;
+                background: url("./public/assets/usuario.svg") no-repeat center center;
                 margin-left: .5rem;
             }
         }
