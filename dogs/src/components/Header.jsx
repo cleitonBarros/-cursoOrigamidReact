@@ -43,7 +43,7 @@ const Headers = styled.header`
 
 
 export default function Header(){
-    const {data, userLogout} = React.useContext(UserContext)
+    const {data} = React.useContext(UserContext)
     return(
         <Headers>
             <Container>
@@ -53,8 +53,7 @@ export default function Header(){
                     </Link>
                     {data ? (
                         <Link  className="login" to="/conta">
-                            {data.nome} / 
-                            <button onClick={userLogout}>Sair</button>
+                            {data.nome} 
                         </Link>
                     ):(
                         <Link  className="login" to="/login">

@@ -5,6 +5,8 @@ import Header from "./components/Header"
 import Login from "./components/Login/Login"
 import Home from "./pages/Home"
 import { UserStorage } from "./global/UserContext"
+import User from "./components/User/User"
+import ProtectedRoute from "./components/Interfaces/ProtectedRoute"
 
 
 
@@ -18,7 +20,14 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="/login/*" element={<Login />}/>
+            <Route path="login/*" element={<Login />}/>
+            <Route 
+              path="conta/*" 
+              element={
+                <ProtectedRoute>
+                  <User />
+                </ProtectedRoute>}
+            />
           </Routes>
           <Footer />  
         </UserStorage>
