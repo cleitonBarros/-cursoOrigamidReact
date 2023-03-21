@@ -14,7 +14,7 @@ export default function LoginCreate(){
 
   const username = useForm()  
   const email = useForm('email')  
-  const password = useForm('')   
+  const password = useForm('password')   
 
   const {userLogin} = React.useContext(UserContext)
   const {request, error, loading }= useFetch()  
@@ -25,7 +25,7 @@ export default function LoginCreate(){
     const {url, options} = USER_POST({ 
       username: username.value, 
       email:email.value,
-      password: password.value, 
+      password: password.value.trim(), 
     })
     const {res} = await request(url, options)
     if(res.ok)userLogin(username.value, password.value)

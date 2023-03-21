@@ -6,7 +6,7 @@ const types ={
         message: "Preencha um email valido",
     },
     password:{
-        regex:/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+        regex:/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z](?=.*?[#?!@$%^&*-]).{8,}$/,
         message: `Deve conter um numero, uma letra maiuscula e minuscula e conter mais de 8 caracters`
 
     }
