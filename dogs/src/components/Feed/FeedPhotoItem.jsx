@@ -49,9 +49,13 @@ const List = styled.li`
     }
 
 `
-export default function FeedPhotoItem({photo}){
+export default function FeedPhotoItem({photo, setModalFoto}){
+
+    function handleClick(){
+        setModalFoto(photo)
+    }
     return (
-        <List>
+        <List onClick={handleClick}>
            <img src={photo.src} alt={photo.title} />
            <span className="view">{photo.acessos}</span>
         </List> 

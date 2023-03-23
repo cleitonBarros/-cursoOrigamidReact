@@ -20,7 +20,7 @@ const Item = styled.ul`
 `
 
 
-export default function FeedPhoto(){
+export default function FeedPhoto({setModalFoto}){
 
     const {data, loading, error, request} =  useFetch();
     React.useEffect(()=>{
@@ -37,7 +37,7 @@ export default function FeedPhoto(){
     return (   
         <Item className="animeLeft">
             {data.map((photo)=>(
-                <FeedPhotoItem key={photo.id} photo={photo}/>
+                <FeedPhotoItem key={photo.id} photo={photo} setModalFoto={setModalFoto}/>
             ))}
           
         </Item>   

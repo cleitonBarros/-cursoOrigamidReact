@@ -6,10 +6,11 @@ import FeedPhoto from "./FeedPhoto";
 
 
 export default function Feed(){
+    const [modalPhoto, setModalFoto] = React.useState(null)
     return (
         <>
-           <FeedModal />
-           <FeedPhoto />
+           {modalPhoto && <FeedModal  photo={modalPhoto} setModalFoto={setModalFoto} /> } 
+           <FeedPhoto setModalFoto={setModalFoto} />
         </> 
            
         
