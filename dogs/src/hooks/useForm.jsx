@@ -9,6 +9,10 @@ const types ={
         regex:/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z](?=.*?[#?!@$%^&*-]).{8,}$/,
         message: `Deve conter um numero, uma letra maiuscula e minuscula e conter mais de 8 caracters`
 
+    }, 
+    number:{
+        regex:/^\d+$/,
+        message:'Utilize numero apenas'
     }
 }
 
