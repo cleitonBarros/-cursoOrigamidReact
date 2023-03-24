@@ -119,7 +119,7 @@ export default function PhotoContent({data}){
                     </ul>
                 </div>
             </div>  
-            <PhotoComments id={photo.id} comments={comments} />
+            <PhotoComments id={photo.id}  comments={comments}/>
         </Photo>
     )
 }
