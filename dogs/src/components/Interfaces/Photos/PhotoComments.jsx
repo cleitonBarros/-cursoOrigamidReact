@@ -3,21 +3,35 @@ import styled from "styled-components"
 import {UserContext} from "../../../global/UserContext"
 import PhotosCommentsForm from "./PhotosCommentsForm"
 
-const Ul = styled.ul`
+const Comentarios= styled.ul`
+    overflow-y: auto;
+    word-break: break-word;
+    padding: 0 2rem;
+
+    li{
+        margin-bottom: .5rem;
+        line-height: 1.2;
+    }
 `
 export default function PhotoComments(props){
     const [comments,setComments] =React.useState(()=> props.comments)
     const {login} = React.useContext(UserContext)
+    const commentsSection = React.useRef(null)
+
+    React.useEffect(() => {
+        commentsSection.current.scrollTop = commentsSection.current.scrollHeight;
+    }, [comments]);
+    
     return(
         <>
-        <Ul>
+        <Comentarios ref={commentsSection}>
             {comments.map((comment)=>(
                 <li key={comment.comment_ID}>
                     <b>{comment.comment_author}:</b>
                     <span>{comment.comment_content}</span>
                 </li>
             ))}
-        </Ul>
+        </Comentarios>
         {login && <PhotosCommentsForm setComments={setComments} id={props.id}/>}
         </>
     )
