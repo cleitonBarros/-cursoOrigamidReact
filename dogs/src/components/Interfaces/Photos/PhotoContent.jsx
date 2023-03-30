@@ -3,6 +3,8 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom'
 import {Title} from '../Title'
 import PhotoComments from "./PhotoComments";
+import { UserContext } from "../../../global/UserContext";
+import PhotoDelete from "./PhotoDelete";
 const Photo = styled.div`
     margin: auto;
     height: 36rem;
@@ -100,6 +102,7 @@ const ImgBox = styled.div`
 
 export default function PhotoContent({data}){
     const {photo, comments} = data
+    const User = React.useContext(UserContext)
     return(
         <Photo>
             <ImgBox>
@@ -108,7 +111,11 @@ export default function PhotoContent({data}){
             <div className="details">
                 <div>
                     <p className="author">
+                        {User.data && User.data.username === photo.author ? 
+                        <PhotoDelete id={photo.id}/>
+                            :
                         <Link to={`/profiel/${photo.author}`}>@{photo.author}</Link>
+                        }
                         <span className="views">{photo.acessos}</span>
                     </p>
                         
