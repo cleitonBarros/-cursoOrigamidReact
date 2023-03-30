@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
+import Image from "../Interfaces/Image"
 import { Container } from "../../global/Container";
 
 const List = styled.li`
@@ -25,7 +26,7 @@ const List = styled.li`
             
         }
     }
-    img{
+    & > div{
         grid-area: 1/1;
     }
     
@@ -56,7 +57,7 @@ export default function FeedPhotoItem({photo, setModalFoto}){
     }
     return (
         <List onClick={handleClick}>
-           <img src={photo.src} alt={photo.title} />
+            <Image  src={photo.src} alt={photo.title}  />
            <span className="view">{photo.acessos}</span>
         </List> 
     )

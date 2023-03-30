@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {Link} from 'react-router-dom'
 import {Title} from '../Title'
+import Image from "../Image"
 import PhotoComments from "./PhotoComments";
 import { UserContext } from "../../../global/UserContext";
 import PhotoDelete from "./PhotoDelete";
@@ -106,7 +107,7 @@ export default function PhotoContent({data}){
     return(
         <Photo>
             <ImgBox>
-                <img src={photo.src} alt={photo.title} />
+                <Image src={photo.src} alt={photo.title}  />
             </ImgBox>
             <div className="details">
                 <div>
