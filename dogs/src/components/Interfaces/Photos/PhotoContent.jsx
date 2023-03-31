@@ -127,7 +127,7 @@ export default function PhotoContent({data,single}){
                         {User.data && User.data.username === photo.author ? 
                         <PhotoDelete id={photo.id}/>
                             :
-                        <Link to={`/profiel/${photo.author}`}>@{photo.author}</Link>
+                        <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
                         }
                         <span className="views">{photo.acessos}</span>
                     </p>
