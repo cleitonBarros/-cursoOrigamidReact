@@ -6,6 +6,7 @@ import LoginPasswordLost from "./LoginPasswordLost";
 import LoginCreate from "./LoginCreate";
 import LoginPasswordReset from "./LoginPasswordReset";
 import { UserContext } from "../../global/UserContext";
+import NotFound from "../../pages/NotFound";
 
 const GridForms = styled.div`
     max-width: 30rem;
@@ -56,6 +57,7 @@ export default function Login(){
                         <Route path="create" element={<LoginCreate />}/>
                         <Route path="lost" element={<LoginPasswordLost />}/>
                         <Route path="reset" element={<LoginPasswordReset />}/>
+                        <Route path="*" element={<NotFound />}/>
                 </Routes>
             </GridForms>
         </Main>

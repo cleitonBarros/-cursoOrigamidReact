@@ -9,6 +9,7 @@ import User from "./components/User/User"
 import ProtectedRoute from "./components/Interfaces/ProtectedRoute"
 import Photo from "./components/Interfaces/Photos/Photo"
 import UserProfile from "./components/User/UserProfile"
+import NotFound from "./pages/NotFound"
 
 
 
@@ -32,6 +33,7 @@ function App() {
             />
             <Route path="foto/:id" element={<Photo />}/>
             <Route path="perfil/:user" element={<UserProfile />}/>
+            <Route path="*" element={<NotFound />}/>
           </Routes>
           <Footer />  
         </UserStorage>
