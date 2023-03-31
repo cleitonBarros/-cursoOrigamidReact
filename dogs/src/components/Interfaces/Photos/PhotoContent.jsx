@@ -33,7 +33,19 @@ const Photo = styled.div`
         overflow-y: auto;
         grid-template-columns: minmax(20rem, 40rem);
     }
+    &.single{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    &.single > div:first-child{
+        grid-row: 1;
+        border-radius: .4rem;
+        overflow: hidden;
 
+    }
+    &.single .details{
+        padding: 1rem  0px 0px 0px;
+    }
     .details{
         padding: 2rem 2rem 0 2rem;
     }
@@ -101,11 +113,11 @@ const ImgBox = styled.div`
 `
 
 
-export default function PhotoContent({data}){
+export default function PhotoContent({data,single}){
     const {photo, comments} = data
     const User = React.useContext(UserContext)
     return(
-        <Photo>
+        <Photo className={single? "single": ""}>
             <ImgBox>
                 <Image src={photo.src} alt={photo.title}  />
             </ImgBox>
@@ -120,14 +132,16 @@ export default function PhotoContent({data}){
                         <span className="views">{photo.acessos}</span>
                     </p>
                         
-                    <Title>{photo.title}</Title>
+                    <Title>
+                        <Link to={`/foto/${photo.id}`}>{photo.title}</Link>
+                    </Title>
                     <ul className="attributes">
                         <li>{photo.peso} kgs</li>
                         <li>{photo.idade === 1 ? `${photo.idade} ano` : `${photo.idade} anos`} </li>
                     </ul>
                 </div>
             </div>  
-            <PhotoComments id={photo.id}  comments={comments}/>
+            <PhotoComments single={single}id={photo.id}  comments={comments}/>
         </Photo>
     )
 }

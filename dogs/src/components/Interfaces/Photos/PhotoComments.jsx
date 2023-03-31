@@ -8,6 +8,9 @@ const Comentarios= styled.ul`
     word-break: break-word;
     padding: 0 2rem;
 
+    &.single{
+        padding: 0px ;
+    }
     li{
         margin-bottom: .5rem;
         line-height: 1.2;
@@ -24,7 +27,7 @@ export default function PhotoComments(props){
     
     return(
         <>
-        <Comentarios ref={commentsSection}>
+        <Comentarios className={props.single ? "single" : ""} ref={commentsSection}>
             {comments.map((comment)=>(
                 <li key={comment.comment_ID}>
                     <b>{comment.comment_author}:</b>
@@ -32,7 +35,7 @@ export default function PhotoComments(props){
                 </li>
             ))}
         </Comentarios>
-        {login && <PhotosCommentsForm setComments={setComments} id={props.id}/>}
+        {login && <PhotosCommentsForm single={props.single}setComments={setComments} id={props.id}/>}
         </>
     )
 }

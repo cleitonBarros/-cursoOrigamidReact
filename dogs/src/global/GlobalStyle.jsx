@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
   }
   .mainContainer{
-    margin-top: 4rem
+    margin-top: 2rem
   }
   a{
     text-decoration: none;
