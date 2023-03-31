@@ -13,7 +13,7 @@ const Photo = () => {
   React.useEffect(()=>{
     const{url, options} = PHOTO_GET(id)
     request(url,options)
-  })
+  },[request,id])
   if(error) return <Error error={error} />
   if(loading) return <Loading />
   if(data) return <section className="container mainContainer"> <PhotoContent data={data} single={true}/></section>;
