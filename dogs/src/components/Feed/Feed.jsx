@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Container } from "../../global/Container";
 import FeedModal from "./FeedModal";
 import FeedPhoto from "./FeedPhoto";
+import PropTypes from 'prop-types';
 
 
 export default function Feed({user}){
@@ -51,4 +52,11 @@ export default function Feed({user}){
             ))} 
         </>          
     )
+}
+
+Feed.defaultProps = {
+    user: 0
+}
+Feed.propType ={
+    user: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired])
 }
