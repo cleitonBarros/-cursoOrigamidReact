@@ -7,6 +7,7 @@ import useForm from "../../hooks/useForm";
 import useFetch from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { PHOTO_POST } from "../../API/api";
+import { Head } from "../Interfaces/head";
 
 const PhotoPost= styled.section`
     display: grid;
@@ -68,6 +69,10 @@ export default function  UserPhotoPost(){
     }
     return(
         <PhotoPost className="animeLeft">
+            <Head
+                title="Poste dua foto  "
+                description="Home do site Dogs, como o feed de fotos"
+            />
             <form onSubmit={handleSubmit}>
                 <Input
                     label='nome'

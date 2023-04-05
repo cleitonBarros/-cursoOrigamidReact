@@ -1,7 +1,12 @@
 import React from "react";
+import { Head } from "../Interfaces/head";
 
 export default function UserStatistic(){
     return(
-        <>statisticas</>
+        <>
+        <Head 
+            title="Estatisticas "
+        />
+        </>
     )
 }

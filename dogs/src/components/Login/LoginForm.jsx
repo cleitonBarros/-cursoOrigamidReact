@@ -7,6 +7,7 @@ import useForm from "../../hooks/useForm";
 import { UserContext } from "../../global/UserContext"
 import  Error  from '../../components/Interfaces/Error'
 import {Title} from "../../components/Interfaces/Title"
+import { Head } from "../Interfaces/head";
 
 const Form = styled.form`
     margin-bottom: 2rem;
@@ -65,7 +66,8 @@ export default function LoginForm(){
     }
     return(
         <section className="animeLeft">
-          <Title>Login</Title>
+            <Head title="Login " />
+            <Title>Login</Title>
           <Form onSubmit={handleSubmit}>
             <Input 
                 name='username'

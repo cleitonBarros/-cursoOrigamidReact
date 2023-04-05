@@ -17,6 +17,15 @@ export const GlobalStyle = createGlobalStyle`
     --type-second: "Spectral", georgia;
     
   }
+  .App{
+    display: flex;
+    flex-direction: column;
+    min-height:  calc(100vh - 10rem)
+  }
+  .AppBody{
+   flex: 2
+
+  }
   ul,li{
     list-style: none;
   }

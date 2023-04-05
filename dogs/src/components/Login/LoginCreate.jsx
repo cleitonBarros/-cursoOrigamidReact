@@ -9,6 +9,7 @@ import useFetch from "../../hooks/useFetch";
 import  Error  from '../../components/Interfaces/Error'
 import { UserContext } from "../../global/UserContext"
 import { USER_POST } from "../../API/api";
+import { Head } from "../Interfaces/head";
 
 export default function LoginCreate(){
 
@@ -34,6 +35,7 @@ export default function LoginCreate(){
 
     return(
         <section className="animeLeft">
+          <Head title="Crie sua conta " />
           <Title>Cadastre-se</Title>
           <form onSubmit={handleSubmit}>
             <Input 
