@@ -20,10 +20,10 @@ export const GlobalStyle = createGlobalStyle`
   .App{
     display: flex;
     flex-direction: column;
-    min-height:  calc(100vh - 10rem)
+    min-height:  calc(100vh + 11rem)
   }
   .AppBody{
-   flex: 2
+   flex: 1
 
   }
   ul,li{
