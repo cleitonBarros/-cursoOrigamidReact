@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {VictoryPie, VictoryChart, VictoryBar} from 'victory'
 
+
 const Total = styled.div`
   grid-column:1/3;
   padding: 2rem;
