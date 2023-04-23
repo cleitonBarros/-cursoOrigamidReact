@@ -7,7 +7,7 @@ import useForm from "../../hooks/useForm";
 import useFetch from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { PHOTO_POST } from "../../API/api";
-import { Head } from "../Interfaces/head";
+import { Head } from "../Interfaces/Head";
 
 const PhotoPost= styled.section`
     display: grid;

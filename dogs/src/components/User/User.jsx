@@ -7,7 +7,7 @@ import UserHeader from "./UserHeader";
 import UserPhotoPost from "./UserPhotoPost";
 import UserStatistic from "./UserStatistic";
 import NotFound from "../../pages/NotFound";
-import { Head } from "../Interfaces/head";
+import { Head } from "../Interfaces/Head";
 
 export default function User(){
     const{ data }= React.useContext(UserContext)
