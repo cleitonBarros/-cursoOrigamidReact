@@ -1,7 +1,7 @@
-# 🐾 Desafio-Lacrei 🐾🐾
+# 🐾 PETSTAGRAM 🐾🐾
 
 <h1 align="center">
-  <img  src="" width="200px" />
+  <img  src="./dogs/plublic/logo.png" width="200px" />
 </h1>
 
 
