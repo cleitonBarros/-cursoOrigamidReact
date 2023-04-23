@@ -1,6 +1,4 @@
 import React from "react";
-import styled from 'styled-components'
-import { Container } from "../../global/Container";
 import FeedModal from "./FeedModal";
 import FeedPhoto from "./FeedPhoto";
 import PropTypes from 'prop-types';

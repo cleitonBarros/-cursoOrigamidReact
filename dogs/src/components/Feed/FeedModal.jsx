@@ -2,7 +2,6 @@ import React from "react";
 import styled from 'styled-components'
 import useFetch from '../../hooks/useFetch'
 import Error from '../Interfaces/Error'
-import { Container } from "../../global/Container";
 import {PHOTO_GET} from '../../API/api'
 import Loading from "../Interfaces/Loading";
 import PhotoContent from "../Interfaces/Photos/PhotoContent";

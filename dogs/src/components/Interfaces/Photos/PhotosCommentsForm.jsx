@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import  Enviar from '../../../../public/enviar.svg'
 import useFetch from "../../../hooks/useFetch"
 import {COMMENT_POST} from '../../../API/api'
 import Error from '../../Interfaces/Error'

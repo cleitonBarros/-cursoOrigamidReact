@@ -9,7 +9,7 @@ import useFetch from "../../hooks/useFetch";
 import  Error  from '../../components/Interfaces/Error'
 import { UserContext } from "../../global/UserContext"
 import { USER_POST } from "../../API/api";
-import { Head } from "../Interfaces/head";
+import { Head } from "../Interfaces/Head";
 
 export default function LoginCreate(){
 

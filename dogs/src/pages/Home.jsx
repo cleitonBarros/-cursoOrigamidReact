@@ -1,6 +1,7 @@
 import React from "react";
 import Feed from '../components/Feed/Feed'
 import { Container } from "../global/Container";
+
 import { Head } from "../components/Interfaces/Head";
 
 
