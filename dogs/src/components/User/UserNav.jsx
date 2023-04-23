@@ -2,10 +2,10 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import styled from "styled-components"
 import { UserContext } from '../../global/UserContext'
-import Adicionar  from '../../../public/adicionar.svg'
-import Sair from '../../../public/sair.svg'
-import Feed  from '../../../public/feed.svg'
-import Estatisticas  from '../../../public/estatisticas.svg'
+import Adicionar  from '../../../img/adicionar.svg'
+import Sair from '../../../img/sair.svg'
+import Feed  from '../../../img/feed.svg'
+import Estatisticas  from '../../../img/estatisticas.svg'
 import useMedia from '../../hooks/useMedia'
 
 
@@ -135,6 +135,10 @@ const Nav = styled.nav`
         }
     }
 
+    a.disabled-link{
+        pointer-events: none;
+    }
+
 `
 export default function UserNav(){
     
@@ -145,6 +149,7 @@ export default function UserNav(){
     React.useEffect(()=>{
         setMobileMenu(false)
     },[pathname])
+
     return (
         <>
             
@@ -162,7 +167,7 @@ export default function UserNav(){
                     <img src={Feed}/> 
                     {mobile && 'Minhas Fotos'}
                 </NavLink>
-                <NavLink to="/conta/statistic">
+                <NavLink aria-disabled to="/conta/statistic">
                     <img src={Estatisticas}/> 
                     {mobile && 'Estatistica'}
                 </NavLink>

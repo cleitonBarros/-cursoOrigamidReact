@@ -85,7 +85,7 @@ export default function PhotosCommentsForm({id, setComments,single}){
                 onChange={({target})=> setComment(target.value)}
             />
             <button>
-                <img src="../../../../public/enviar.svg" alt="icone" />
+                <img src="../../../../img/enviar.svg" alt="icone" />
             </button>
             <Error error={error} />
         </Form>

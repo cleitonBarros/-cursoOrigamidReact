@@ -39,9 +39,9 @@ export default function  UserPhotoPost(){
     const peso = useForm('number');
     const idade =useForm('number');
     const [img,setImg] =React.useState({})
+    
     const {data, error, loading, request} = useFetch()
     const navigate = useNavigate();
-
     React.useEffect(()=>{
         if(data) navigate('/conta')
     },[data,navigate])

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
-import logofooter from '../../public/dogs-footer.svg'
+import logofooter from '../../img/dogs-footer.svg'
 const Rodape = styled.footer`
     background: #fb1;
     padding: 3rem 1rem 0 1rem;

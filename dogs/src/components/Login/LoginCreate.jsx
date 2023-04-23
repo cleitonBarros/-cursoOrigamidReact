@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled from 'styled-components'
 import { Title } from "../../components/Interfaces/Title"
 import Button from "../Form/Button";
 import Input from "../Form/Input";
