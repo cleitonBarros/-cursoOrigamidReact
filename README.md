@@ -10,11 +10,11 @@
 </h1>
 
 <h1 align="center">
-  <img  src="./dogs/public/feed.png" width="1000px" height="500px"/>
+  <img  src="./dogs/public/feed.png" width="1000px" height="1500px"/>
 </h1>
 
 <h1 align="center">
-  <img  src="./dogs/public/loginCel.png" width="500px" height="500px"/>
+  <img  src="./dogs/public/loginCel.png" width="250px" height="500px"/>
 </h1>
 
 
