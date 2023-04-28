@@ -47,9 +47,7 @@ export default function UserStatsGraphs({data}){
             }
         })
         setTotal(
-            data
-                .map(({acessos})=>Number(acessos))
-                .reduce((a,b)=> a + b)
+            data.map(({acessos})=>Number(acessos))
         )
         setGraph(graphData)
     },[data]);

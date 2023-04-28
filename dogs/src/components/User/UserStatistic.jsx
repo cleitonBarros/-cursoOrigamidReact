@@ -18,12 +18,11 @@ export default function UserStatistic(){
 
     if(loading) return <Loading />
     if(error) return <Error error={error}/>
-    if(data) 
-    return(
+    if(data)return(
         <React.Suspense fallback={<div></div>}>
             <Head title="Estatisticas "/>
             <UserStatsGraphs data={data}/>
         </React.Suspense>   
     )
-    else return null
+    else return <p>sem dados ainda</p>
 }
