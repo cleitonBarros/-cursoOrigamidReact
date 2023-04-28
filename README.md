@@ -1,20 +1,20 @@
 # 🐾 PETSTAGRAM 🐾🐾
 
 <h1 align="center">
-  <img  src="./dogs/plublic/logo.png" width="200px" />
+  <img  src="./dogs/public/dogs.svg" width="200px" />
 </h1>
 
 
 <h1 align="center">
-  <img  src="" width="1000px" height="500px"/>
+  <img  src="./dogs/public/loginWeb.png" width="1000px" height="500px"/>
 </h1>
 
 <h1 align="center">
-  <img  src="" width="1000px" height="500px"/>
+  <img  src="./dogs/public/feed.png" width="1000px" height="500px"/>
 </h1>
 
 <h1 align="center">
-  <img  src="" width="1000px" height="500px"/>
+  <img  src="./dogs/public/loginCel.png" width="500px" height="500px"/>
 </h1>
 
 
