@@ -11,6 +11,7 @@ import NotFound from "../../pages/NotFound";
 const GridForms = styled.div`
     max-width: 30rem;
     padding: 3rem;
+    margin-top: 20vh;
 
     @media (max-width: 65rem) {
         padding:1rem 4rem;

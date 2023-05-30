@@ -19,6 +19,10 @@ const PhotoPost= styled.section`
         margin-bottom: 1rem;
     }
 
+    @media(max-width: 40rem){
+        grid-template-columns: 1fr ;
+    }
+
 `
 const Preview = styled.div`
    border-radius: 1rem;

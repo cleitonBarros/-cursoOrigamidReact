@@ -32,6 +32,7 @@ const WayLink = styled(Link)`
 `
 const Cadastro = styled.div`
         margin-top: 4rem;
+        margin-bottom: 4rem;
         h2{
             font-family: var(--type-second);
             line-height: 1;
@@ -82,7 +83,7 @@ export default function LoginForm(){
                 {...password}
             />
             {loading ? <Button disabled value="Carregando..."/> : <Button value="Entrar"/>}
-            <Error error={error}/>
+            <Error error={error && 'Dados incorretos'}/>
           </Form>
           <WayLink className="recuperar" to='/login/lost'>Perdeu a senha ?</WayLink>
           <Cadastro>

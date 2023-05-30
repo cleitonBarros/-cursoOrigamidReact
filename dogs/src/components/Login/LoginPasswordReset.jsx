@@ -38,7 +38,7 @@ export default function LoginPasswordReset(){
     if(res.ok) Navigate('/login')
   }
     return(
-        <div>
+        <section className="animeLeft">
           <Head title="Resete " />
           <Title>Resete a senha</Title>
           <p>{key}</p>
@@ -57,7 +57,7 @@ export default function LoginPasswordReset(){
             }
           </form>
           <Error error={error}/>
-        </div>
+        </section>
     )
     
 }
