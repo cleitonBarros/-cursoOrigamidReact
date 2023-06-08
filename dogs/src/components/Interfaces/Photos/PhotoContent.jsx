@@ -68,7 +68,7 @@ const Photo = styled.div`
             width: 16px;
             height: 10px;
             margin-right: .5rem;
-            background: url('./public/visualizacao-black.svg') no-repeat;
+            background: url('../../img/visualizacao-black.svg') no-repeat;
         }
     }
 

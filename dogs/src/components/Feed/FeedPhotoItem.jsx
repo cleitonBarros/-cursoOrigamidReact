@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
 import Image from "../Interfaces/Image"
-import { Container } from "../../global/Container";
 
 const List = styled.li`
     display: grid;
@@ -22,7 +21,7 @@ const List = styled.li`
             width: 16px;
             height: 10px;
             margin-right: .25rem;
-            background: url('./public/visualizacao.svg') no-repeat;
+            background: url('../../img/visualizacao.svg') no-repeat;
             
         }
     }

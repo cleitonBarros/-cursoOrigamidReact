@@ -5,7 +5,7 @@ import { PHOTO_GET } from '../../../API/api';
 import Error from "../Error"
 import Loading from "../Loading"
 import PhotoContent from './PhotoContent'
-import { Head } from '../head';
+import { Head } from '../Head';
 
 
 const Photo = () => {

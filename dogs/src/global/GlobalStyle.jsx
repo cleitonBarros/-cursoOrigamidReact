@@ -42,8 +42,8 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 50rem;
     padding: 0 1rem;
     margin: 0 auto;
-  }mainContainer
-  .{
+  }
+  .mainContainer{
     margin-top: 2rem
   }
   a{

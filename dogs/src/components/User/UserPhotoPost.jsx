@@ -7,7 +7,7 @@ import useForm from "../../hooks/useForm";
 import useFetch from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { PHOTO_POST } from "../../API/api";
-import { Head } from "../Interfaces/head";
+import { Head } from "../Interfaces/Head";
 
 const PhotoPost= styled.section`
     display: grid;
@@ -43,9 +43,9 @@ export default function  UserPhotoPost(){
     const peso = useForm('number');
     const idade =useForm('number');
     const [img,setImg] =React.useState({})
+    
     const {data, error, loading, request} = useFetch()
     const navigate = useNavigate();
-
     React.useEffect(()=>{
         if(data) navigate('/conta')
     },[data,navigate])

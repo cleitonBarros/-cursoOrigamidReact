@@ -6,7 +6,7 @@ import {VictoryPie, VictoryChart, VictoryBar} from 'victory'
 const Total = styled.div`
   grid-column:1/3;
   padding: 2rem;
-  font-size: 2rem
+  font-size: 2rem;
 
     &.graphItem{
         box-shadow: 0 10px 20px rgba(0,0,0, .1);
@@ -22,7 +22,7 @@ const Graph = styled.section`
     display: grid;  
     gap: 2rem; 
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 
     .graphItem{
         box-shadow: 0 10px 20px rgba(0,0,0, .1);
@@ -47,9 +47,7 @@ export default function UserStatsGraphs({data}){
             }
         })
         setTotal(
-            data
-                .map(({acessos})=>Number(acessos))
-                .reduce((a,b)=> a + b)
+            data.map(({acessos})=>Number(acessos))
         )
         setGraph(graphData)
     },[data]);

@@ -7,7 +7,7 @@ import useForm from "../../hooks/useForm";
 import { UserContext } from "../../global/UserContext"
 import  Error  from '../../components/Interfaces/Error'
 import {Title} from "../../components/Interfaces/Title"
-import { Head } from "../Interfaces/head";
+import { Head } from "../Interfaces/Head";
 
 const Form = styled.form`
     margin-bottom: 2rem;

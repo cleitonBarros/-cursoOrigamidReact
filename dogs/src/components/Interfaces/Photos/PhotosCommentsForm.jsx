@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import  Enviar from '../../../../public/enviar.svg'
 import useFetch from "../../../hooks/useFetch"
 import {COMMENT_POST} from '../../../API/api'
 import Error from '../../Interfaces/Error'
@@ -86,7 +85,7 @@ export default function PhotosCommentsForm({id, setComments,single}){
                 onChange={({target})=> setComment(target.value)}
             />
             <button>
-                <img src="../../../../public/enviar.svg" alt="icone" />
+                <img src="../../../../img/enviar.svg" alt="icone" />
             </button>
             <Error error={error} />
         </Form>

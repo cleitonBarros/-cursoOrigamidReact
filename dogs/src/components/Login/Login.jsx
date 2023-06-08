@@ -32,7 +32,7 @@ const Main = styled.main`
     &::before{
         display: block;
         content:'';
-        background: url("./public/login.jpg") no-repeat center center;
+        background: url("../../../img/login.jpg") no-repeat center center;
         background-size: cover;
     }
 

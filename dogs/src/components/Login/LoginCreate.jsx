@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import styled from 'styled-components'
 import { Title } from "../../components/Interfaces/Title"
 import Button from "../Form/Button";
 import Input from "../Form/Input";
@@ -9,7 +7,7 @@ import useFetch from "../../hooks/useFetch";
 import  Error  from '../../components/Interfaces/Error'
 import { UserContext } from "../../global/UserContext"
 import { USER_POST } from "../../API/api";
-import { Head } from "../Interfaces/head";
+import { Head } from "../Interfaces/Head";
 
 export default function LoginCreate(){
 

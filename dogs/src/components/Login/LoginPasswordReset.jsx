@@ -8,7 +8,7 @@ import { RESET_PASSWORD } from "../../API/api";
 import { Title } from "../Interfaces/Title";
 import Error from "../Interfaces/Error";
 import { Navigate } from "react-router-dom";
-import { Head } from "../Interfaces/head";
+import { Head } from "../Interfaces/Head";
 
 export default function LoginPasswordReset(){
   const [login, setLogin] = React.useState('')
